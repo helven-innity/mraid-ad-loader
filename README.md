@@ -1,23 +1,23 @@
-# MRAID Ad Loader
+# 📄 MRAID Ad Loader
 
 A lightweight ad preview and testing tool for developers to load and test MRAID ads from external systems or custom HTML/JavaScript code.
 
-## Features
+## ✨ Features
 
-- **Load Ad from Advenue**: Fetch ads from external ad platform using Ad ID with JWT authentication
-- **Load Custom Script**: Test custom HTML/JavaScript ad tags directly
-- **Placement Options**: Support for inline (300x250, 300x600, 320x480) and interstitial placements
-- **Real-time Preview**: Instant ad rendering with loading animations
-- **No Build Required**: Pure JavaScript with Tailwind CSS from CDN
+- **🔗 Load Ad from Advenue**: Fetch ads from external ad platform using Ad ID with JWT authentication
+- **📝 Load Custom Script**: Test custom HTML/JavaScript ad tags directly
+- **📐 Placement Options**: Support for inline (300x250, 300x600, 320x480) and interstitial placements
+- **⚡ Real-time Preview**: Instant ad rendering with loading animations
+- **🚀 No Build Required**: Pure JavaScript with Tailwind CSS from CDN
 
-## Tech Stack
+## 🛠️ Technologies
 
 - **Frontend**: Vanilla JavaScript (ad.js)
 - **Backend**: PHP with JWT authentication
 - **Styling**: Tailwind CSS (CDN)
 - **Authentication**: Firebase PHP-JWT (RS256)
 
-## Installation
+## 🚀 Installation
 
 ### Prerequisites
 
@@ -27,32 +27,32 @@ A lightweight ad preview and testing tool for developers to load and test MRAID 
 
 ### Setup
 
-1. Clone the repository:
+1. 📥 Clone the repository:
 ```bash
 git clone <repository-url>
 cd mraid-ad-loader
 ```
 
-2. Install PHP dependencies:
+2. 📚 Install PHP dependencies:
 ```bash
 composer install
 ```
 
-3. Generate RSA key pair for JWT authentication:
+3. 🔐 Generate RSA key pair for JWT authentication:
 ```bash
 mkdir keys
 openssl genrsa -out keys/mraid_ad_loader_private.pem 2048
 openssl rsa -in keys/mraid_ad_loader_private.pem -pubout -out keys/mraid_ad_loader_public.pem
 ```
 
-4. Start the development server:
+4. 🚀 Start the development server:
 ```bash
 php -S localhost:8000
 ```
 
-5. Open `http://localhost:8000/index.html` in your browser
+5. 🌐 Open `http://localhost:8000/index.html` in your browser
 
-## Usage
+## 📖 Usage
 
 ### Load Ad from Advenue
 
@@ -71,7 +71,7 @@ php -S localhost:8000
 4. Click **Load Script** button
 5. The ad will render immediately
 
-### Example Ad Tag
+### 📄 Example Ad Tag
 
 ```html
 <script>
@@ -94,7 +94,7 @@ adNetwork.ad.push({
 </script>
 ```
 
-## Architecture
+## 🏗️ Architecture
 
 ### Frontend (ad.js)
 
@@ -117,7 +117,7 @@ adNetwork.ad.push({
 - Returns ad tag HTML upon successful authentication
 - Comprehensive error handling and logging
 
-## JWT Authentication Flow
+## 🔄 JWT Authentication Flow
 
 1. Frontend sends Ad ID to `ad.php`
 2. `ad.php` generates JWT signed with private key
@@ -138,7 +138,7 @@ adNetwork.ad.push({
 }
 ```
 
-## API Endpoints
+## 🔗 API Endpoints
 
 ### POST /ad.php
 
@@ -180,7 +180,7 @@ Authorization: Bearer <jwt_token>
 }
 ```
 
-## File Structure
+## 📁 File Structure
 
 ```
 mraid-ad-loader/
@@ -194,10 +194,10 @@ mraid-ad-loader/
 │   └── mraid_ad_loader_public.pem
 ├── assets/
 │   └── favicon.ico
-└── tests/             # Test cases and UAT reports
+└── tests/
 ```
 
-## Security
+## 🔒 Security
 
 - RSA-256 JWT signing for secure authentication
 - Private keys stored locally and excluded from version control
@@ -205,7 +205,7 @@ mraid-ad-loader/
 - CORS headers configured for cross-origin requests
 - Input validation on both frontend and backend
 
-## Development
+## 🛠️ Development
 
 ### Debug Mode
 
@@ -215,14 +215,14 @@ Debug logs are written to `debug.log` for troubleshooting JWT and API issues.
 
 The application includes preset ad IDs for quick testing of various ad formats and sizes.
 
-## Testing
+## 🛠️ Testing
 
-Refer to `tests/UAT_TEST_CASES.md` for comprehensive test scenarios and expected results.
+Refer to `tests/UAT_TEST_CASES.md` for comprehensive scenarios and expected results.
 
-## License
+## 📜 License
 
 Proprietary - Internal Development Tool
 
-## Support
+## 📞 Support
 
-For issues or questions, please contact the development team.
+For issues or questions, please contact R&D Team.
